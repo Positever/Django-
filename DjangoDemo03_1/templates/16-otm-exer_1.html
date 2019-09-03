@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <p>
+        <select id="selPub">
+            <option value="0">===请选择===</option>
+            {% for pub in publishers %}
+                <option value="{{ pub.id }}"
+                    {% if publisher %}
+                        {% if publisher.id == pub.id %}
+                        selected
+                        {% endif %}
+                    {% endif %}
+                >
+                    {{ pub.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </p>
+
+    <div>
+
+    </div>
+</body>
+</html>
